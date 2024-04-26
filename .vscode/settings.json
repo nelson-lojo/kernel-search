@@ -1,0 +1,3 @@
+{
+    "python.defaultInterpreterPath": "chipyard/.conda-env/bin/python"
+}

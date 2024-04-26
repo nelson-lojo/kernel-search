@@ -3,7 +3,10 @@ FROM mcr.microsoft.com/devcontainers/universal
 # RUN wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
 # RUN bash Miniforge3-Linux-x86_64.sh -y
 # RUN conda init
+RUN add-apt-repository ppa:ubuntu-toolchain-r/test -y
 RUN apt update -y && apt install kmod -y
+RUN apt-get upgrade libstdc++6
+
 
 RUN conda install -n base python==3.10 -y
 

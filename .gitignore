@@ -3,3 +3,4 @@ exclude/
 log
 generated_c/
 *.tar
+__pycache__/
