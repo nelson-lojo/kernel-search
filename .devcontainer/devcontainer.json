@@ -6,6 +6,7 @@
     "build" : {
         "dockerfile": "Dockerfile",
     },
+    "workspaceFolder": "/workspaces/project/",
 
     // Features to add to the dev container. More info: https://containers.dev/features.
     // "features": {},
@@ -14,7 +15,7 @@
     // "forwardPorts": [],
 
     // Use 'postCreateCommand' to run commands after the container is created.
-    "postAttachCommand": "conda init && mv /workspaces/kernel-search/ /workspaces/project/ && source dev_things && prep_conda",
+    "postAttachCommand": "conda init && source /workspaces/project/dev_things && prep_conda",
     "customizations": {
         "vscode": {
             "extensions": [
