@@ -1,0 +1,73 @@
+==>  Configuring libgloss
++ cd build
++ ../configure --prefix=/workspaces/project/chipyard/.conda-env/riscv-tools/riscv64-unknown-elf --host=riscv64-unknown-elf
+checking for riscv64-unknown-elf-gcc... riscv64-unknown-elf-gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... yes
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether riscv64-unknown-elf-gcc accepts -g... yes
+checking for riscv64-unknown-elf-gcc option to accept ISO C89... none needed
+checking for riscv64-unknown-elf-ar... riscv64-unknown-elf-ar
+checking for riscv64-unknown-elf-size... riscv64-unknown-elf-size
+checking whether multilib is enabled... no
+configure: creating ./config.status
+config.status: creating Makefile
+==>  Building libgloss
++ /workspaces/project/chipyard/.conda-env/bin/make -C build
+make: Entering directory '/workspaces/project/chipyard/toolchains/libgloss/build'
+riscv64-unknown-elf-gcc -g -O2 -std=c11 -pedantic -Wall -fno-common -fno-builtin -mcmodel=medany   -I ../include -c -o misc/traps.o ../misc/traps.c
+riscv64-unknown-elf-gcc -g -O2 -std=c11 -pedantic -Wall -fno-common -fno-builtin -mcmodel=medany   -I ../include -c -o misc/htif.o ../misc/htif.c
+riscv64-unknown-elf-gcc -g -O2 -std=c11 -pedantic -Wall -fno-common -fno-builtin -mcmodel=medany   -I ../include -c -o misc/tls.o ../misc/tls.c
+riscv64-unknown-elf-gcc -g -O2 -std=c11 -pedantic -Wall -fno-common -fno-builtin -mcmodel=medany   -I ../include -c -o misc/main.o ../misc/main.c
+riscv64-unknown-elf-gcc -g -O2 -std=c11 -pedantic -Wall -fno-common -fno-builtin -mcmodel=medany   -I ../include -c -o sys/nanosleep.o ../sys/nanosleep.c
+riscv64-unknown-elf-gcc -g -O2 -std=c11 -pedantic -Wall -fno-common -fno-builtin -mcmodel=medany   -I ../include -c -o sys/access.o ../sys/access.c
+riscv64-unknown-elf-gcc -g -O2 -std=c11 -pedantic -Wall -fno-common -fno-builtin -mcmodel=medany   -I ../include -c -o sys/chdir.o ../sys/chdir.c
+riscv64-unknown-elf-gcc -g -O2 -std=c11 -pedantic -Wall -fno-common -fno-builtin -mcmodel=medany   -I ../include -c -o sys/chmod.o ../sys/chmod.c
+riscv64-unknown-elf-gcc -g -O2 -std=c11 -pedantic -Wall -fno-common -fno-builtin -mcmodel=medany   -I ../include -c -o sys/chown.o ../sys/chown.c
+riscv64-unknown-elf-gcc -g -O2 -std=c11 -pedantic -Wall -fno-common -fno-builtin -mcmodel=medany   -I ../include -c -o sys/close.o ../sys/close.c
+riscv64-unknown-elf-gcc -g -O2 -std=c11 -pedantic -Wall -fno-common -fno-builtin -mcmodel=medany   -I ../include -c -o sys/execve.o ../sys/execve.c
+riscv64-unknown-elf-gcc -g -O2 -std=c11 -pedantic -Wall -fno-common -fno-builtin -mcmodel=medany   -I ../include -c -o sys/exit.o ../sys/exit.c
+riscv64-unknown-elf-gcc -g -O2 -std=c11 -pedantic -Wall -fno-common -fno-builtin -mcmodel=medany   -I ../include -c -o sys/faccessat.o ../sys/faccessat.c
+riscv64-unknown-elf-gcc -g -O2 -std=c11 -pedantic -Wall -fno-common -fno-builtin -mcmodel=medany   -I ../include -c -o sys/fork.o ../sys/fork.c
+riscv64-unknown-elf-gcc -g -O2 -std=c11 -pedantic -Wall -fno-common -fno-builtin -mcmodel=medany   -I ../include -c -o sys/fstat.o ../sys/fstat.c
+riscv64-unknown-elf-gcc -g -O2 -std=c11 -pedantic -Wall -fno-common -fno-builtin -mcmodel=medany   -I ../include -c -o sys/fstatat.o ../sys/fstatat.c
+riscv64-unknown-elf-gcc -g -O2 -std=c11 -pedantic -Wall -fno-common -fno-builtin -mcmodel=medany   -I ../include -c -o sys/ftime.o ../sys/ftime.c
+riscv64-unknown-elf-gcc -g -O2 -std=c11 -pedantic -Wall -fno-common -fno-builtin -mcmodel=medany   -I ../include -c -o sys/getcwd.o ../sys/getcwd.c
+riscv64-unknown-elf-gcc -g -O2 -std=c11 -pedantic -Wall -fno-common -fno-builtin -mcmodel=medany   -I ../include -c -o sys/getpid.o ../sys/getpid.c
+riscv64-unknown-elf-gcc -g -O2 -std=c11 -pedantic -Wall -fno-common -fno-builtin -mcmodel=medany   -I ../include -c -o sys/gettimeofday.o ../sys/gettimeofday.c
+riscv64-unknown-elf-gcc -g -O2 -std=c11 -pedantic -Wall -fno-common -fno-builtin -mcmodel=medany   -I ../include -c -o sys/isatty.o ../sys/isatty.c
+riscv64-unknown-elf-gcc -g -O2 -std=c11 -pedantic -Wall -fno-common -fno-builtin -mcmodel=medany   -I ../include -c -o sys/kill.o ../sys/kill.c
+riscv64-unknown-elf-gcc -g -O2 -std=c11 -pedantic -Wall -fno-common -fno-builtin -mcmodel=medany   -I ../include -c -o sys/link.o ../sys/link.c
+riscv64-unknown-elf-gcc -g -O2 -std=c11 -pedantic -Wall -fno-common -fno-builtin -mcmodel=medany   -I ../include -c -o sys/lseek.o ../sys/lseek.c
+riscv64-unknown-elf-gcc -g -O2 -std=c11 -pedantic -Wall -fno-common -fno-builtin -mcmodel=medany   -I ../include -c -o sys/lstat.o ../sys/lstat.c
+riscv64-unknown-elf-gcc -g -O2 -std=c11 -pedantic -Wall -fno-common -fno-builtin -mcmodel=medany   -I ../include -c -o sys/open.o ../sys/open.c
+riscv64-unknown-elf-gcc -g -O2 -std=c11 -pedantic -Wall -fno-common -fno-builtin -mcmodel=medany   -I ../include -c -o sys/openat.o ../sys/openat.c
+riscv64-unknown-elf-gcc -g -O2 -std=c11 -pedantic -Wall -fno-common -fno-builtin -mcmodel=medany   -I ../include -c -o sys/read.o ../sys/read.c
+riscv64-unknown-elf-gcc -g -O2 -std=c11 -pedantic -Wall -fno-common -fno-builtin -mcmodel=medany   -I ../include -c -o sys/sbrk.o ../sys/sbrk.c
+riscv64-unknown-elf-gcc -g -O2 -std=c11 -pedantic -Wall -fno-common -fno-builtin -mcmodel=medany   -I ../include -c -o sys/stat.o ../sys/stat.c
+riscv64-unknown-elf-gcc -g -O2 -std=c11 -pedantic -Wall -fno-common -fno-builtin -mcmodel=medany   -I ../include -c -o sys/sysconf.o ../sys/sysconf.c
+riscv64-unknown-elf-gcc -g -O2 -std=c11 -pedantic -Wall -fno-common -fno-builtin -mcmodel=medany   -I ../include -c -o sys/times.o ../sys/times.c
+riscv64-unknown-elf-gcc -g -O2 -std=c11 -pedantic -Wall -fno-common -fno-builtin -mcmodel=medany   -I ../include -c -o sys/unlink.o ../sys/unlink.c
+riscv64-unknown-elf-gcc -g -O2 -std=c11 -pedantic -Wall -fno-common -fno-builtin -mcmodel=medany   -I ../include -c -o sys/utime.o ../sys/utime.c
+riscv64-unknown-elf-gcc -g -O2 -std=c11 -pedantic -Wall -fno-common -fno-builtin -mcmodel=medany   -I ../include -c -o sys/wait.o ../sys/wait.c
+riscv64-unknown-elf-gcc -g -O2 -std=c11 -pedantic -Wall -fno-common -fno-builtin -mcmodel=medany   -I ../include -c -o sys/write.o ../sys/write.c
+riscv64-unknown-elf-gcc -g -O2 -std=c11 -pedantic -Wall -fno-common -fno-builtin -mcmodel=medany   -I ../include -c -o libc/stdio/vxprintf.o ../libc/stdio/vxprintf.c
+riscv64-unknown-elf-gcc -g -O2 -std=c11 -pedantic -Wall -fno-common -fno-builtin -mcmodel=medany   -I ../include -c -o libc/stdio/printf.o ../libc/stdio/printf.c
+riscv64-unknown-elf-gcc -g -O2 -std=c11 -pedantic -Wall -fno-common -fno-builtin -mcmodel=medany   -I ../include -c -o libc/stdio/sprintf.o ../libc/stdio/sprintf.c
+riscv64-unknown-elf-gcc -g -O2 -std=c11 -pedantic -Wall -fno-common -fno-builtin -mcmodel=medany   -I ../include -c -o libc/stdio/snprintf.o ../libc/stdio/snprintf.c
+riscv64-unknown-elf-gcc -g -O2 -std=c11 -pedantic -Wall -fno-common -fno-builtin -mcmodel=medany   -I ../include -c -o libc/stdio/puts.o ../libc/stdio/puts.c
+riscv64-unknown-elf-gcc -g -O2 -std=c11 -pedantic -Wall -fno-common -fno-builtin -mcmodel=medany   -I ../include -c -o libc/stdio/printbuf.o ../libc/stdio/printbuf.c
+riscv64-unknown-elf-gcc -g -O2 -std=c11 -pedantic -Wall -fno-common -fno-builtin -mcmodel=medany   -I ../include -D__ASSEMBLY__ -c -o misc/crt0.o ../misc/crt0.S
+riscv64-unknown-elf-gcc -g -O2 -std=c11 -pedantic -Wall -fno-common -fno-builtin -mcmodel=medany   -I ../include -D__ASSEMBLY__ -c -o misc/crtmain.o ../misc/crtmain.S
+riscv64-unknown-elf-gcc -g -O2 -std=c11 -pedantic -Wall -fno-common -fno-builtin -mcmodel=medany   -I ../include -D__ASSEMBLY__ -c -o misc/crtmain-argv.o ../misc/crtmain-argv.S
+riscv64-unknown-elf-gcc -g -O2 -std=c11 -pedantic -Wall -fno-common -fno-builtin -mcmodel=medany   -I ../include -D__ASSEMBLY__ -c -o misc/init.o ../misc/init.S
+riscv64-unknown-elf-ar rcs libgloss_htif.a misc/traps.o misc/tls.o misc/main.o misc/htif.o sys/nanosleep.o sys/access.o sys/chdir.o sys/chmod.o sys/chown.o sys/close.o sys/execve.o sys/exit.o sys/faccessat.o sys/fork.o sys/fstat.o sys/fstatat.o sys/ftime.o sys/getcwd.o sys/getpid.o sys/gettimeofday.o sys/isatty.o sys/kill.o sys/link.o sys/lseek.o sys/lstat.o sys/open.o sys/openat.o sys/read.o sys/sbrk.o sys/stat.o sys/sysconf.o sys/times.o sys/unlink.o sys/utime.o sys/wait.o sys/write.o libc/stdio/vxprintf.o libc/stdio/printf.o libc/stdio/sprintf.o libc/stdio/snprintf.o libc/stdio/puts.o libc/stdio/printbuf.o misc/crt0.o misc/crtmain.o misc/crtmain-argv.o misc/init.o
+make: Leaving directory '/workspaces/project/chipyard/toolchains/libgloss/build'
+==>  Installing libgloss
++ /workspaces/project/chipyard/.conda-env/bin/make -C build install
+make: Entering directory '/workspaces/project/chipyard/toolchains/libgloss/build'
+install -m 644 -p -D -t /workspaces/project/chipyard/.conda-env/riscv-tools/riscv64-unknown-elf/lib// libgloss_htif.a ../util/htif.specs ../util/htif_nano.specs ../util/htif_wrap.specs ../util/htif_argv.specs ../util/htif.ld
+make: Leaving directory '/workspaces/project/chipyard/toolchains/libgloss/build'
