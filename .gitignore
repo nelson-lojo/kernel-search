@@ -6,3 +6,5 @@ generated_c/
 __pycache__/
 chipyard/.conda-env
 *.zip
+out.py
+chipyard/generators/gemmini/software/gemmini-rocc-tests/bareMetalC/generated_harness.c
