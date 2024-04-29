@@ -16,3 +16,4 @@ RUN conda config --set solver libmamba
 RUN conda install -n base conda-lock==1.4.0 -y
 
 CMD bash
+ENTRYPOINT bash
