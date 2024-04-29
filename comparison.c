@@ -12,7 +12,7 @@
 //     Weights : f32[16, 16] @DRAM,
 //     Out : f32[16, 16] @DRAM
 // )
-/*
+//*
 void generated_operation(const elem_t* In, const elem_t* Weights, elem_t* Out ) {
 for (int_fast32_t i = 0; i < 16; i++) {
   for (int_fast32_t j = 0; j < 16; j++) {
