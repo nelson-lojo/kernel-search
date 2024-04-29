@@ -4,3 +4,5 @@ log
 generated_c/
 *.tar
 __pycache__/
+chipyard/.conda-env
+*.zip
