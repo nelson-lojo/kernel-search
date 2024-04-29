@@ -14,8 +14,7 @@
     // "forwardPorts": [],
 
     // Use 'postCreateCommand' to run commands after the container is created.
-    "updateContentCommand": "mv /workspaces/kernel-search/ /workspaces/project/ && source dev_things && prep_conda",
-    "postAttachCommand": "conda init",
+    "postAttachCommand": "conda init && mv /workspaces/kernel-search/ /workspaces/project/ && source dev_things && prep_conda",
     "customizations": {
         "vscode": {
             "extensions": [
