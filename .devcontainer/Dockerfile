@@ -5,7 +5,6 @@ FROM mcr.microsoft.com/devcontainers/universal
 # RUN conda init
 RUN add-apt-repository ppa:ubuntu-toolchain-r/test -y
 RUN apt update -y && apt install kmod -y
-RUN apt-get upgrade libstdc++6
 
 
 RUN conda install -n base python==3.10 -y
