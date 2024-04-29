@@ -3,9 +3,7 @@
 {
     // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
     // "image" : "mcr.microsoft.com/devcontainers/universal"
-    "build" : {
-        "dockerfile": "Dockerfile",
-    },
+    "build" : { "dockerfile": "Dockerfile" },
     "workspaceFolder": "/workspaces/project/",
 
     // Features to add to the dev container. More info: https://containers.dev/features.
@@ -15,7 +13,8 @@
     // "forwardPorts": [],
 
     // Use 'postCreateCommand' to run commands after the container is created.
-    "postAttachCommand": "conda init && source /workspaces/project/dev_things && prep_conda",
+    "postCreateCommand": "conda init && mkdir /workspaces/project/ && mv /workspaces/kernel-search /workspaces/project/ && source /workspaces/project/dev_things && prep_conda",
+    // "postAttachCommand": "",
     "customizations": {
         "vscode": {
             "extensions": [
