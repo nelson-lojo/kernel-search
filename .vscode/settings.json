@@ -1,3 +1,4 @@
 {
-    "python.defaultInterpreterPath": "chipyard/.conda-env/bin/python"
+    "python.defaultInterpreterPath": "chipyard/.conda-env/bin/python",
+    "python.analysis.typeCheckingMode": "standard"
 }
