@@ -5,6 +5,7 @@
     // "image" : "mcr.microsoft.com/devcontainers/universal"
     "build" : { "dockerfile": "Dockerfile" },
     "workspaceFolder": "/workspaces/project/",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/project/,type=bind",
 
     // Features to add to the dev container. More info: https://containers.dev/features.
     // "features": {},
@@ -13,8 +14,10 @@
     // "forwardPorts": [],
 
     // Use 'postCreateCommand' to run commands after the container is created.
-    "postCreateCommand": "conda init && mkdir /workspaces/project/ && mv /workspaces/kernel-search /workspaces/project/ && source /workspaces/project/dev_things && prep_conda",
-    // "postAttachCommand": "",
+    "postCreateCommand": "/bin/bash -c 'conda init && source /workspaces/project/dev_things.sh && prep_conda'",
+    // "onCreateCommand": "",
+    // "postAttachCommand": 
+
     "customizations": {
         "vscode": {
             "extensions": [
