@@ -265,7 +265,7 @@ class PersistentMap(PersistentDataStruct):
 
 if __name__ == "__main__":
     eval_queue = PersistentQueue(
-        # persistence_file=QUEUE_FILE,
+        persistence_file=QUEUE_FILE,
         overwrite=False
     )
 
