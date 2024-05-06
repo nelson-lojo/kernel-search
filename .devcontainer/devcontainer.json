@@ -3,9 +3,20 @@
 {
     // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
     // "image" : "mcr.microsoft.com/devcontainers/universal"
-    "build" : { "dockerfile": "Dockerfile" },
+    "build" : { 
+        "dockerfile": "Dockerfile",
+        "options": [
+            "--platform",
+            "linux/amd64"
+        ]
+    },
     "workspaceFolder": "/workspaces/project/",
     "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/project/,type=bind",
+
+    "runArgs": [
+        "--platform",
+        "linux/amd64",
+    ],
 
     // Features to add to the dev container. More info: https://containers.dev/features.
     // "features": {},
