@@ -1,4 +1,5 @@
 {
     "python.defaultInterpreterPath": "/workspaces/project/chipyard/.conda-env/bin/python",
-    "python.analysis.typeCheckingMode": "standard"
+    "python.analysis.typeCheckingMode": "standard",
+    "remote.downloadExtensionsLocally": true,
 }

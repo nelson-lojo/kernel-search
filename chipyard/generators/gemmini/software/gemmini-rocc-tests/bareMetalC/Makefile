@@ -1,6 +1,7 @@
 include $(abs_top_srcdir)/Makefrag
 
 tests = \
+	generated_harness #\
 	mvin_mvout \
 	mvin_mvout_zeros \
 	mvin_mvout_stride \
@@ -51,8 +52,7 @@ tests = \
 	resadd \
 	global_average \
 	gemmini_counter \
-	template \
-	generated_harness
+	template
 
 tests_baremetal = $(tests:=-baremetal)
 
