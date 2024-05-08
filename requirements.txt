@@ -1,5 +1,6 @@
 
 git+https://github.com/exo-lang/exo
+ipykernel
 # pip install 'transformers[torch]'
 
 # tiktoken==0.4.0

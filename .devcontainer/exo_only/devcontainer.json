@@ -1,5 +1,13 @@
 {
     "image" : "mcr.microsoft.com/devcontainers/universal",
+    "workspaceFolder": "/workspaces/project/",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/project/,type=bind",
+
+    "runArgs": [
+        "--platform",
+        "linux/amd64",
+    ],
+    
     "customizations": {
         "vscode": {
             "extensions": [
@@ -7,5 +15,6 @@
                 "ms-toolsai.jupyter"
             ]
         }
-    }
+    },
+    "postStartCommand": "pip install -r requirements.txt "
 }
