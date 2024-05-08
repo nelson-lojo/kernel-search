@@ -1,5 +1,5 @@
 
 git+https://github.com/exo-lang/exo
-pip install 'transformers[torch]'
+# pip install 'transformers[torch]'
 
-tiktoken==0.4.0
+# tiktoken==0.4.0
