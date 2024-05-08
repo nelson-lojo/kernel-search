@@ -5,6 +5,7 @@ import os
 import pickle
 import concurrent.futures
 
+from heapq import heappush, heappop
 from time import sleep
 
 ROOT_DIR = "/workspaces/project/"
@@ -242,10 +243,48 @@ class PersistentQueue(PersistentDataStruct):
         
         return ret_val
 
+class PersistentHeap(PersistentDataStruct):
+    
+    def __init__(self, filename: str, overwrite: bool = False):
+        super().__init__([], filename, overwrite)
+
+    def _put(self, *items, **_):
+        with open(self.out_file, "r+b") as f:
+            heap = pickle.load(f)
+
+            for item in items:
+                heappush(heap, item)
+
+            f.seek(0, 0) # move write cursor to beginning of file
+            pickle.dump(heap, f)
+
+    def _get(self, *_, default=None, **__):
+        with open(self.out_file, "r+b") as f:
+            heap = pickle.load(f)
+
+            try:
+                ret_val = heappop(heap)
+            except IndexError as _:
+                ret_val = default
+
+            f.seek(0, 0)
+            pickle.dump(heap, f)
+
+        return ret_val
+
 class PersistentMap(PersistentDataStruct):
 
     def __init__(self, filename: str = f"{ARTIFACT_DIR}/persistent_map.pkl", overwrite: bool = False):
         super().__init__({ }, filename, overwrite)
+
+    def remove(self, key):
+        with open(self.out_file, "r+b") as f:
+            mapping = pickle.load(f)
+
+            del mapping[key]
+
+            f.seek(0, 0) # move write cursor to beginning of file
+            pickle.dump(mapping, f)
 
     def _put(self, key, value): # pyright: ignore[reportIncompatibleMethodOverride]
         with open(self.out_file, "r+b") as f:
